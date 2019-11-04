@@ -38,7 +38,7 @@ function Actions() {
     window.addEventListener("scroll", handleScroll, false);
 
     return () => {
-      window.removeEventListener("scrollend", handleScroll, false);
+      window.removeEventListener("scroll", handleScroll, false);
     };
   }, [lastYPos]);
 
