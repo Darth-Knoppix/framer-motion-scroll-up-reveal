@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -5,9 +9,93 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: rgb(214, 98, 240);
+  background: linear-gradient(
+    343deg,
+    rgba(214, 98, 240, 1) 0%,
+    rgba(64, 212, 251, 1) 42%,
+    rgba(0, 255, 202, 1) 100%
+  );
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.info {
+  max-width: 30rem;
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.info .content {
+  margin-top: 2rem;
+}
+
+.header {
+  float: left;
+  width: 8rem;
+  height: 10rem;
+}
+
+.title {
+  margin: 0;
+}
+
+.subtitle {
+  margin-bottom: 0.5rem;
+  float: left;
+}
+
+.container {
+  height: 300vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.actions {
+  display: block;
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  padding: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 2rem;
+}
+
+.actions > button {
+  padding: 0.5rem 1.25rem;
+  margin-right: 0.5rem;
+  border-radius: 1.25rem;
+  border: 0;
+  font-size: 1rem;
+  transition: all 0.1s ease-in-out;
+}
+
+.actions > button:hover,
+.actions > button:focus {
+  background-color: black;
+  color: white;
+}
+
+.actions > button:last-child {
+  margin-right: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .info {
+    background-color: transparent;
+    font-size: 2em;
+  }
+
+  .header {
+    float: initial;
+    height: auto;
+    margin: 0;
+    width: 100%;
+  }
+
+  .subtitle {
+    float: initial;
+    margin: 0;
+  }
 }
